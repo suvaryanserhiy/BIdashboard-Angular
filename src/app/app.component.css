@@ -3,11 +3,17 @@
   padding-top: 80px;
   position: fixed;
   background-color: #191f26;
+  width: 16.6667%; /* Width equivalent to col-md-2 */
 }
+
 #dashboard {
-  margin-top: 60px;
+  margin-left: 16.6667%; /* Shift content to the right by the sidebar width */
+  margin-top: 60px; /* To avoid overlapping with the navbar */
 }
-#navbar {
-  background-color: #161a1e !important;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.25);
+
+@media (max-width: 767.98px) {
+  /* On smaller screens, when the sidebar is hidden, remove the left margin */
+  #dashboard {
+    margin-left: 0;
+  }
 }
